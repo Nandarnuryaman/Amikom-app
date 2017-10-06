@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,6 +24,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 android.util.Log.d("--AmikomApp--", usr.getText().toString());
                 android.util.Log.d("--AmikomApp--", pwd.getText().toString());
+
+                Toast.makeText(getApplicationContext(),usr.getText().toString()+" is Logged in..",
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }
