@@ -1,13 +1,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/usr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Hello dunia" />
+        android:layout_marginTop="169dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usr"
+        android:layout_alignStart="@+id/usr"
+        android:layout_below="@+id/usr"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pwd"
+        android:layout_alignLeft="@+id/pwd"
+        android:layout_alignRight="@+id/pwd"
+        android:layout_alignStart="@+id/pwd"
+        android:layout_below="@+id/pwd"
+        android:layout_marginTop="26dp"
+        android:text="Login" />
+
 </RelativeLayout>
