@@ -25,10 +25,19 @@ public class LoginActivity extends AppCompatActivity {
                 android.util.Log.d("--AmikomApp--", usr.getText().toString());
                 android.util.Log.d("--AmikomApp--", pwd.getText().toString());
 
-                Toast.makeText(getApplicationContext(),usr.getText().toString()+" is Logged in..",
+                if (isUserExists(usr.getText().toString(), pwd.getText().toString()))   {
+                    Toast.makeText(getApplicationContext(),usr.getText().toString()+"Login Berhasil",
+                            Toast.LENGTH_SHORT).show();
+finish();
+                } else Toast.makeText(getApplicationContext(),"Password salah",
                         Toast.LENGTH_SHORT).show();
+
             }
         });
+    }
+
+    private boolean isUserExists(String username, String password) {
+        return username.equals("Nandar") && password.equals("admin");
     }
 
 }
